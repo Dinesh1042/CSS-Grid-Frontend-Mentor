@@ -1,0 +1,173 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600;400;&display=swap"); */
+
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 13px;
+}
+body {
+  background-color: hsl(210, 46%, 95%);
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+section {
+  width: 90%;
+  display: grid;
+  max-width: 1440px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, mincontent);
+  margin: 0% auto;
+  grid-gap: 1em;
+  padding: 15px;
+}
+.gridCont {
+  display: flex;
+  padding: 25px;
+  justify-content: space-between;
+  flex-direction: column;
+  border-radius: 9px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  transition: 0.3s ease transform;
+}
+.gridCont .gridTop {
+  display: flex;
+  align-items: center;
+}
+.gridCont .gridTop .imgCont {
+  height: 35px;
+  width: 35px;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 2px solid crimson;
+}
+.gridCont h2 {
+  margin: 10px 0;
+  font-size: 18px;
+  color: hsl(0, 0%, 100%);
+  letter-spacing: 0.6px;
+  z-index: 1;
+}
+.gridCont .review {
+  color: hsl(0, 0%, 100%);
+  opacity: 0.7;
+  z-index: 1;
+  font-weight: 400;
+}
+.gridCont .gridTop .imgCont img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.nameAndGraduate {
+  margin-left: 13px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 2;
+}
+.nameAndGraduate .name {
+  font-weight: 600;
+  color: hsl(0, 0%, 100%);
+  letter-spacing: 0.7px;
+}
+.nameAndGraduate .graduate {
+  font-size: 11px;
+  opacity: 0.5;
+  color: hsl(0, 0%, 100%);
+  letter-spacing: 0.6px;
+}
+.quotation {
+  position: absolute;
+  z-index: 1;
+  right: 15%;
+  top: 0;
+}
+.grid3 .nameAndGraduate .name,
+.grid5 .nameAndGraduate .name {
+  color: hsl(219, 29%, 14%);
+}
+.grid3 h2,
+.grid5 h2 {
+  color: hsl(219, 29%, 14%);
+}
+.grid3 .nameAndGraduate .graduate,
+.grid5 .nameAndGraduate .graduate {
+  color: hsl(219, 29%, 14%);
+}
+.grid3 .review,
+.grid5 .review {
+  color: hsl(219, 29%, 14%);
+}
+
+.grid1 {
+  position: relative;
+  background-color: hsl(263, 55%, 52%);
+  grid-column: 1/3;
+  grid-row: 1/2;
+}
+.grid1 .gridTop .imgCont {
+  border-color: hsla(263, 100%, 77%, 0.979);
+}
+.grid2 .gridTop .imgCont {
+  border-color: hsl(217, 35%, 57%);
+}
+.grid3 .gridTop .imgCont {
+  border-color: hsla(263, 100%, 77%, 0.979);
+}
+.grid4 .gridTop .imgCont {
+  border-color: hsl(215, 8%, 49%);
+}
+.grid5 .gridTop .imgCont {
+  border-color: hsla(263, 100%, 77%, 0.979);
+}
+.grid2 {
+  background-color: hsl(217, 19%, 35%);
+}
+.grid3 {
+  background-color: hsl(0, 0%, 100%);
+  color: #000;
+}
+.grid4 {
+  background-color: hsl(219, 29%, 14%);
+  grid-column: 2/4;
+}
+.grid5 {
+  background-color: hsl(0, 0%, 100%);
+  grid-row: 1/3;
+  grid-column: 4;
+}
+.gridCont:hover {
+  transform: scale(1.02);
+}
+@media (max-width: 900px) {
+  section {
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .grid1 {
+    grid-column: 1/4;
+  }
+  .grid2 {
+    grid-column: 1/2;
+    grid-row: 2;
+  }
+  .grid3 {
+    grid-column: 2/3;
+    grid-row: 2;
+  }
+  .grid5 {
+    grid-column: unset;
+    grid-row: 3;
+  }
+}
+@media (max-width: 550px) {
+  section {
+    display: flex;
+    flex-direction: column;
+  }
+}
